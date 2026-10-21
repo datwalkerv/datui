@@ -83,3 +83,32 @@ describe("AppRoot + providers", () => {
     expect(screen.getByTestId("probe")).toHaveTextContent("compact,compact");
   });
 });
+
+describe("AppRoot full mode", () => {
+  it("mirrors the color scheme onto <html> and restores it on unmount", () => {
+    const html = document.documentElement;
+    const { rerender, unmount } = render(
+      <ConfigProvider colorScheme="dark">
+        <AppRoot />
+      </ConfigProvider>,
+    );
+    expect(html).toHaveAttribute("data-theme", "dark");
+    rerender(
+      <ConfigProvider colorScheme="light">
+        <AppRoot />
+      </ConfigProvider>,
+    );
+    expect(html).toHaveAttribute("data-theme", "light");
+    unmount();
+    expect(html).not.toHaveAttribute("data-theme");
+  });
+
+  it("leaves <html> alone in embedded mode", () => {
+    render(
+      <ConfigProvider colorScheme="dark">
+        <AppRoot mode="embedded" />
+      </ConfigProvider>,
+    );
+    expect(document.documentElement).not.toHaveAttribute("data-theme");
+  });
+});

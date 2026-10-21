@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useIsomorphicLayoutEffect } from "../../hooks/useIsomorphicLayoutEffect";
 import { PortalContainerProvider } from "../../lib/portal";
 import { cn } from "../../lib/utils";
 import { useAdaptivity } from "../AdaptivityProvider/AdaptivityProvider";
@@ -35,6 +36,19 @@ export const AppRoot = React.forwardRef<HTMLDivElement, AppRootProps>(function A
     "data-density": density ?? sizeY,
     dir: direction,
   } as const;
+
+  // In full mode the whole page is the app: theme <html> too, so the page background, overscroll and
+  // native scrollbars match. Restored on unmount.
+  useIsomorphicLayoutEffect(() => {
+    if (mode !== "full") return;
+    const html = document.documentElement;
+    const previous = html.getAttribute("data-theme");
+    html.setAttribute("data-theme", colorScheme);
+    return () => {
+      if (previous === null) html.removeAttribute("data-theme");
+      else html.setAttribute("data-theme", previous);
+    };
+  }, [mode, colorScheme]);
 
   return (
     <div
