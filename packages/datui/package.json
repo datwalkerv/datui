@@ -1,0 +1,93 @@
+{
+  "name": "datui",
+  "version": "0.1.0",
+  "description": "A complete, accessible React component library built with Tailwind CSS and Radix primitives.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datwalkerv/datui.git",
+    "directory": "packages/datui"
+  },
+  "homepage": "https://github.com/datwalkerv/datui#readme",
+  "bugs": {
+    "url": "https://github.com/datwalkerv/datui/issues"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "tailwind",
+    "radix",
+    "design-system"
+  ],
+  "scripts": {
+    "gen:index": "node scripts/gen-index.mjs",
+    "build": "node scripts/gen-index.mjs && tsup && node scripts/postbuild.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@floating-ui/react": "0.27.20",
+    "@radix-ui/react-focus-scope": "1.3.1",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "date-fns": "4.4.0",
+    "embla-carousel-react": "8.6.0",
+    "lucide-react": "1.50.0",
+    "radix-ui": "1.8.1",
+    "react-day-picker": "10.0.2",
+    "tailwind-merge": "3.7.0",
+    "vaul": "1.1.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.8",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "6.1.2",
+    "axe-core": "4.14.0",
+    "jsdom": "30.1.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "tailwindcss": "4.3.3",
+    "tsup": "9.0.0",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,186 @@
+/*
+ * datui design tokens.
+ * Raw values live in `--dt-*` custom properties so themes can override them
+ * without touching Tailwind. `theme.css` maps them onto Tailwind utilities.
+ */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces */
+  --dt-background: #ffffff;
+  --dt-foreground: #000000;
+  --dt-background-secondary: #f0f2f5;
+  --dt-background-tertiary: #f9f9f9;
+  --dt-card: #ffffff;
+  --dt-card-foreground: #000000;
+  --dt-popover: #ffffff;
+  --dt-popover-foreground: #000000;
+  --dt-overlay: rgb(0 0 0 / 0.4);
+  --dt-overlay-light: rgb(0 0 0 / 0.04);
+
+  /* Brand & intent */
+  --dt-primary: #0063d6;
+  --dt-primary-hover: #005ac4;
+  --dt-primary-foreground: #ffffff;
+  --dt-secondary: rgb(0 28 61 / 0.05);
+  --dt-secondary-hover: rgb(0 28 61 / 0.09);
+  --dt-secondary-foreground: #0063d6;
+  --dt-muted: #f2f3f5;
+  --dt-muted-foreground: #626d7a;
+  --dt-subtle-foreground: #5d6773;
+  --dt-accent: rgb(0 99 214 / 0.1);
+  --dt-accent-foreground: #0063d6;
+  --dt-destructive: #b52626;
+  --dt-destructive-hover: #a32222;
+  --dt-destructive-foreground: #ffffff;
+  --dt-positive: #22702a;
+  --dt-positive-foreground: #ffffff;
+  --dt-warning: #ffa000;
+  --dt-warning-foreground: #000000;
+  --dt-link: #0063d6;
+  --dt-mark: rgb(255 214 0 / 0.4);
+
+  /* Lines */
+  --dt-border: rgb(0 0 0 / 0.12);
+  --dt-separator: #d7d8d9;
+  --dt-input: #f2f3f5;
+  --dt-input-border: rgb(0 0 0 / 0.12);
+  --dt-ring: rgb(0 99 214 / 0.55);
+
+  /* Controls */
+  --dt-control-track: #e1e3e6;
+  --dt-control-thumb: #ffffff;
+  --dt-skeleton-from: #f2f3f5;
+  --dt-skeleton-to: #e1e3e6;
+  --dt-icon-secondary: #7f8a96;
+  --dt-icon-tertiary: #b8c1cc;
+
+  /* Shadows */
+  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06), 0 0 2px rgb(0 0 0 / 0.04);
+  --dt-shadow-md: 0 4px 16px rgb(0 0 0 / 0.08), 0 0 4px rgb(0 0 0 / 0.04);
+  --dt-shadow-lg: 0 8px 24px rgb(0 0 0 / 0.12), 0 0 8px rgb(0 0 0 / 0.06);
+
+  /* Opacity */
+  --dt-opacity-disabled: 0.48;
+  --dt-opacity-hover: 0.04;
+  --dt-opacity-active: 0.08;
+
+  /* Shape */
+  --dt-radius-xs: 4px;
+  --dt-radius-sm: 6px;
+  --dt-radius-md: 8px;
+  --dt-radius-lg: 12px;
+  --dt-radius-xl: 16px;
+  --dt-radius-2xl: 24px;
+
+  /* Component heights (density-aware, see below) */
+  --dt-height-s: 28px;
+  --dt-height-m: 36px;
+  --dt-height-l: 44px;
+  --dt-height-cell: 48px;
+  --dt-height-panel-header: 56px;
+  --dt-height-tabbar: 56px;
+
+  /* Icon sizes */
+  --dt-icon-xs: 12px;
+  --dt-icon-sm: 16px;
+  --dt-icon-md: 20px;
+  --dt-icon-lg: 24px;
+  --dt-icon-xl: 28px;
+
+  /* Motion */
+  --dt-duration-fast: 120ms;
+  --dt-duration-normal: 200ms;
+  --dt-duration-slow: 320ms;
+  --dt-ease-standard: cubic-bezier(0.3, 0.3, 0.5, 1);
+  --dt-ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Layering */
+  --dt-z-sticky: 10;
+  --dt-z-fixed: 20;
+  --dt-z-dropdown: 50;
+  --dt-z-modal: 100;
+  --dt-z-popover: 110;
+  --dt-z-snackbar: 120;
+  --dt-z-tooltip: 130;
+
+  /* Focus ring */
+  --dt-focus-ring-width: 2px;
+  --dt-focus-ring-offset: 2px;
+
+  /* Typography */
+  --dt-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --dt-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --dt-background: #19191a;
+  --dt-foreground: #e1e3e6;
+  --dt-background-secondary: #0a0a0a;
+  --dt-background-tertiary: #222223;
+  --dt-card: #232324;
+  --dt-card-foreground: #e1e3e6;
+  --dt-popover: #2c2d2e;
+  --dt-popover-foreground: #e1e3e6;
+  --dt-overlay: rgb(0 0 0 / 0.6);
+  --dt-overlay-light: rgb(255 255 255 / 0.04);
+
+  --dt-primary: #6aa6f0;
+  --dt-primary-hover: #7db2f3;
+  --dt-primary-foreground: #0b1d36;
+  --dt-secondary: rgb(255 255 255 / 0.1);
+  --dt-secondary-hover: rgb(255 255 255 / 0.14);
+  --dt-secondary-foreground: #e1e3e6;
+  --dt-muted: #2c2d2e;
+  --dt-muted-foreground: #9a9c9e;
+  --dt-subtle-foreground: #a6a8aa;
+  --dt-accent: rgb(113 170 235 / 0.16);
+  --dt-accent-foreground: #6aa6f0;
+  --dt-destructive: #ff7a7a;
+  --dt-destructive-hover: #ff8c8c;
+  --dt-destructive-foreground: #330a0a;
+  --dt-positive: #5cc163;
+  --dt-positive-foreground: #0b2a0e;
+  --dt-warning: #ffc107;
+  --dt-warning-foreground: #000000;
+  --dt-link: #6aa6f0;
+  --dt-mark: rgb(255 214 0 / 0.3);
+
+  --dt-border: rgb(255 255 255 / 0.12);
+  --dt-separator: #363738;
+  --dt-input: #2c2d2e;
+  --dt-input-border: rgb(255 255 255 / 0.12);
+  --dt-ring: rgb(113 170 235 / 0.56);
+
+  --dt-control-track: #4f4f50;
+  --dt-control-thumb: #ffffff;
+  --dt-skeleton-from: #2c2d2e;
+  --dt-skeleton-to: #363738;
+  --dt-icon-secondary: #8f9193;
+  --dt-icon-tertiary: #555657;
+
+  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.32), 0 0 2px rgb(0 0 0 / 0.16);
+  --dt-shadow-md: 0 4px 16px rgb(0 0 0 / 0.4), 0 0 4px rgb(0 0 0 / 0.2);
+  --dt-shadow-lg: 0 8px 24px rgb(0 0 0 / 0.48), 0 0 8px rgb(0 0 0 / 0.24);
+}
+
+/* Compact density: desktop pointer + dense layouts. */
+[data-density="compact"] {
+  --dt-height-s: 24px;
+  --dt-height-m: 32px;
+  --dt-height-l: 36px;
+  --dt-height-cell: 44px;
+  --dt-height-panel-header: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dt-duration-fast: 0ms;
+    --dt-duration-normal: 0ms;
+    --dt-duration-slow: 0ms;
+  }
+}

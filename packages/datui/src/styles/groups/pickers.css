@@ -1,0 +1,15 @@
+/* Tokens for the pickers component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+:root {
+  /* Max height of select / chips-select dropdown lists. */
+  --dt-select-dropdown-max-height: 320px;
+  /* Calendar day cell size per calendar size. */
+  --dt-calendar-day-s: 32px;
+  --dt-calendar-day-m: 40px;
+}
+
+/* No dark overrides: the sizes above are theme independent. */
+
+@theme inline {
+  --spacing-calendar-day-s: var(--dt-calendar-day-s);
+  --spacing-calendar-day-m: var(--dt-calendar-day-m);
+}

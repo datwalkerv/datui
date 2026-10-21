@@ -1,0 +1,53 @@
+/* Tokens for the navigation component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+
+:root {
+  /* Horizontal sign of panel slides; flipped for right-to-left layouts. */
+  --dt-nav-sign: 1;
+  --dt-nav-parallax: -30%;
+}
+
+[dir="rtl"] {
+  --dt-nav-sign: -1;
+}
+
+@theme {
+  --animate-nav-push-in: dt-nav-push-in var(--dt-duration-slow) var(--dt-ease-emphasized) both;
+  --animate-nav-push-out: dt-nav-push-out var(--dt-duration-slow) var(--dt-ease-emphasized) both;
+  --animate-nav-pop-in: dt-nav-pop-in var(--dt-duration-slow) var(--dt-ease-emphasized) both;
+  --animate-nav-pop-out: dt-nav-pop-out var(--dt-duration-slow) var(--dt-ease-emphasized) both;
+  --animate-nav-drop-in: dt-nav-drop-in var(--dt-duration-normal) var(--dt-ease-emphasized) both;
+  --animate-nav-drop-out: dt-nav-drop-out var(--dt-duration-fast) var(--dt-ease-standard) both;
+
+  @keyframes dt-nav-push-in {
+    from {
+      transform: translateX(calc(100% * var(--dt-nav-sign)));
+    }
+  }
+  @keyframes dt-nav-push-out {
+    to {
+      transform: translateX(calc(var(--dt-nav-parallax) * var(--dt-nav-sign)));
+    }
+  }
+  @keyframes dt-nav-pop-in {
+    from {
+      transform: translateX(calc(var(--dt-nav-parallax) * var(--dt-nav-sign)));
+    }
+  }
+  @keyframes dt-nav-pop-out {
+    to {
+      transform: translateX(calc(100% * var(--dt-nav-sign)));
+    }
+  }
+  @keyframes dt-nav-drop-in {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+  }
+  @keyframes dt-nav-drop-out {
+    to {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+  }
+}

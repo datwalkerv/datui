@@ -1,0 +1,48 @@
+/* Tokens for the overlays component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+
+:root,
+[data-theme="light"] {
+  /* Tooltip "neutral" bubble and the dark Snackbar surface. */
+  --dt-tooltip-neutral: #44474b;
+  --dt-tooltip-neutral-foreground: #ffffff;
+  --dt-snackbar-dark: #2c2d2e;
+  --dt-snackbar-dark-foreground: #ffffff;
+  --dt-sheet-handle: rgb(0 0 0 / 0.16);
+
+  /* Overlay widths */
+  --dt-modal-width-s: 440px;
+  --dt-modal-width-m: 560px;
+  --dt-modal-width-l: 720px;
+  --dt-modal-card-width: 400px;
+  --dt-alert-width: 320px;
+  --dt-tooltip-width: 220px;
+  --dt-popover-width: 320px;
+  --dt-snackbar-width: 420px;
+  --dt-menu-width: 200px;
+}
+
+[data-theme="dark"] {
+  --dt-tooltip-neutral: #5d5f61;
+  --dt-tooltip-neutral-foreground: #ffffff;
+  --dt-snackbar-dark: #444547;
+  --dt-snackbar-dark-foreground: #ffffff;
+  --dt-sheet-handle: rgb(255 255 255 / 0.24);
+}
+
+@theme inline {
+  --color-tooltip-neutral: var(--dt-tooltip-neutral);
+  --color-tooltip-neutral-foreground: var(--dt-tooltip-neutral-foreground);
+  --color-snackbar-dark: var(--dt-snackbar-dark);
+  --color-snackbar-dark-foreground: var(--dt-snackbar-dark-foreground);
+  --color-sheet-handle: var(--dt-sheet-handle);
+
+  --container-modal-s: var(--dt-modal-width-s);
+  --container-modal-m: var(--dt-modal-width-m);
+  --container-modal-l: var(--dt-modal-width-l);
+  --container-modal-card: var(--dt-modal-card-width);
+  --container-alert: var(--dt-alert-width);
+  --container-tooltip: var(--dt-tooltip-width);
+  --container-popover: var(--dt-popover-width);
+  --container-snackbar: var(--dt-snackbar-width);
+  --container-menu: var(--dt-menu-width);
+}

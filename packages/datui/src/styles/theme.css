@@ -1,0 +1,192 @@
+/* Maps datui tokens onto Tailwind v4 utilities (bg-primary, h-control-m, text-title-2, ...). */
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --color-background: var(--dt-background);
+  --color-foreground: var(--dt-foreground);
+  --color-background-secondary: var(--dt-background-secondary);
+  --color-background-tertiary: var(--dt-background-tertiary);
+  --color-card: var(--dt-card);
+  --color-card-foreground: var(--dt-card-foreground);
+  --color-popover: var(--dt-popover);
+  --color-popover-foreground: var(--dt-popover-foreground);
+  --color-overlay: var(--dt-overlay);
+  --color-overlay-light: var(--dt-overlay-light);
+  --color-primary: var(--dt-primary);
+  --color-primary-hover: var(--dt-primary-hover);
+  --color-primary-foreground: var(--dt-primary-foreground);
+  --color-secondary: var(--dt-secondary);
+  --color-secondary-hover: var(--dt-secondary-hover);
+  --color-secondary-foreground: var(--dt-secondary-foreground);
+  --color-muted: var(--dt-muted);
+  --color-muted-foreground: var(--dt-muted-foreground);
+  --color-subtle-foreground: var(--dt-subtle-foreground);
+  --color-accent: var(--dt-accent);
+  --color-accent-foreground: var(--dt-accent-foreground);
+  --color-destructive: var(--dt-destructive);
+  --color-destructive-hover: var(--dt-destructive-hover);
+  --color-destructive-foreground: var(--dt-destructive-foreground);
+  --color-positive: var(--dt-positive);
+  --color-positive-foreground: var(--dt-positive-foreground);
+  --color-warning: var(--dt-warning);
+  --color-warning-foreground: var(--dt-warning-foreground);
+  --color-link: var(--dt-link);
+  --color-mark: var(--dt-mark);
+  --color-border: var(--dt-border);
+  --color-separator: var(--dt-separator);
+  --color-input: var(--dt-input);
+  --color-input-border: var(--dt-input-border);
+  --color-ring: var(--dt-ring);
+  --color-control-track: var(--dt-control-track);
+  --color-control-thumb: var(--dt-control-thumb);
+  --color-skeleton-from: var(--dt-skeleton-from);
+  --color-skeleton-to: var(--dt-skeleton-to);
+  --color-icon-secondary: var(--dt-icon-secondary);
+  --color-icon-tertiary: var(--dt-icon-tertiary);
+
+  --radius-xs: var(--dt-radius-xs);
+  --radius-sm: var(--dt-radius-sm);
+  --radius-md: var(--dt-radius-md);
+  --radius-lg: var(--dt-radius-lg);
+  --radius-xl: var(--dt-radius-xl);
+  --radius-2xl: var(--dt-radius-2xl);
+
+  --shadow-sm: var(--dt-shadow-sm);
+  --shadow-md: var(--dt-shadow-md);
+  --shadow-lg: var(--dt-shadow-lg);
+
+  --spacing-control-s: var(--dt-height-s);
+  --spacing-control-m: var(--dt-height-m);
+  --spacing-control-l: var(--dt-height-l);
+  --spacing-cell: var(--dt-height-cell);
+  --spacing-panel-header: var(--dt-height-panel-header);
+  --spacing-tabbar: var(--dt-height-tabbar);
+  --spacing-icon-xs: var(--dt-icon-xs);
+  --spacing-icon-sm: var(--dt-icon-sm);
+  --spacing-icon-md: var(--dt-icon-md);
+  --spacing-icon-lg: var(--dt-icon-lg);
+  --spacing-icon-xl: var(--dt-icon-xl);
+
+  --font-sans: var(--dt-font-sans);
+  --font-mono: var(--dt-font-mono);
+
+  --ease-standard: var(--dt-ease-standard);
+  --ease-emphasized: var(--dt-ease-emphasized);
+  --duration-fast: var(--dt-duration-fast);
+  --duration-normal: var(--dt-duration-normal);
+  --duration-slow: var(--dt-duration-slow);
+
+  --z-index-sticky: var(--dt-z-sticky);
+  --z-index-fixed: var(--dt-z-fixed);
+  --z-index-dropdown: var(--dt-z-dropdown);
+  --z-index-modal: var(--dt-z-modal);
+  --z-index-popover: var(--dt-z-popover);
+  --z-index-snackbar: var(--dt-z-snackbar);
+  --z-index-tooltip: var(--dt-z-tooltip);
+}
+
+@theme {
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1280px;
+
+  /* Type scale: size / line-height / weight */
+  --text-display-1: 40px;
+  --text-display-1--line-height: 44px;
+  --text-display-2: 36px;
+  --text-display-2--line-height: 40px;
+  --text-display-3: 32px;
+  --text-display-3--line-height: 36px;
+  --text-display-4: 28px;
+  --text-display-4--line-height: 32px;
+  --text-title-1: 24px;
+  --text-title-1--line-height: 28px;
+  --text-title-2: 20px;
+  --text-title-2--line-height: 24px;
+  --text-title-3: 17px;
+  --text-title-3--line-height: 22px;
+  --text-headline-1: 16px;
+  --text-headline-1--line-height: 20px;
+  --text-headline-2: 15px;
+  --text-headline-2--line-height: 20px;
+  --text-body: 16px;
+  --text-body--line-height: 20px;
+  --text-paragraph: 15px;
+  --text-paragraph--line-height: 20px;
+  --text-subhead: 14px;
+  --text-subhead--line-height: 18px;
+  --text-footnote: 13px;
+  --text-footnote--line-height: 16px;
+  --text-caption-1: 12px;
+  --text-caption-1--line-height: 14px;
+  --text-caption-2: 11px;
+  --text-caption-2--line-height: 14px;
+  --text-caption-3: 10px;
+  --text-caption-3--line-height: 12px;
+
+  --animate-spin: spin 0.7s linear infinite;
+  --animate-shimmer: shimmer 1.5s linear infinite;
+  --animate-fade-in: fade-in var(--dt-duration-normal) var(--dt-ease-standard);
+  --animate-fade-out: fade-out var(--dt-duration-normal) var(--dt-ease-standard);
+  --animate-scale-in: scale-in var(--dt-duration-normal) var(--dt-ease-emphasized);
+  --animate-scale-out: scale-out var(--dt-duration-fast) var(--dt-ease-standard);
+  --animate-slide-up: slide-up var(--dt-duration-slow) var(--dt-ease-emphasized);
+  --animate-slide-down: slide-down var(--dt-duration-normal) var(--dt-ease-standard);
+  --animate-indeterminate: indeterminate 1.4s var(--dt-ease-standard) infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+  @keyframes scale-out {
+    to {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes slide-down {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes indeterminate {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(250%);
+    }
+  }
+}
+
+@utility focus-ring {
+  outline: var(--dt-focus-ring-width) solid var(--dt-ring);
+  outline-offset: var(--dt-focus-ring-offset);
+}

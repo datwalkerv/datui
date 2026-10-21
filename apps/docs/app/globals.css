@@ -1,0 +1,22 @@
+@import "tailwindcss";
+/* The docs compile datui from source; published apps import "datui/styles.css" instead. */
+@import "../../../packages/datui/src/styles/index.css";
+
+/* Docs-site files use datui tokens too. */
+@source "../";
+
+html,
+body {
+  margin: 0;
+  background: var(--dt-background-secondary);
+}
+
+/* Example brand color used by custom-color demos; chosen per scheme to keep AA contrast. */
+:root {
+  --docs-brand: #7a2fbf;
+  --docs-brand-foreground: #ffffff;
+}
+[data-theme="dark"] {
+  --docs-brand: #c49bf0;
+  --docs-brand-foreground: #1f0b33;
+}

@@ -1,0 +1,26 @@
+/*
+ * datui stylesheet. Import after Tailwind in your app CSS:
+ *   @import "tailwindcss";
+ *   @import "datui/styles.css";
+ */
+@import "./tokens.css";
+@import "./theme.css";
+@import "./groups/basics.css";
+@import "./groups/cells.css";
+@import "./groups/forms.css";
+@import "./groups/pickers.css";
+@import "./groups/overlays.css";
+@import "./groups/navigation.css";
+@import "./groups/media.css";
+
+/* Let the host app's Tailwind generate the utilities datui components use. */
+@source "../";
+
+@layer base {
+  .datui-root {
+    font-family: var(--dt-font-sans);
+    color: var(--dt-foreground);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}

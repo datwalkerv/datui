@@ -1,0 +1,51 @@
+/* Tokens for the media component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+:root {
+  /* CardScroll item widths */
+  --dt-card-scroll-s: 136px;
+  --dt-card-scroll-m: 200px;
+  --dt-card-scroll-l: 288px;
+  /* Gallery bullets */
+  --dt-bullet: 6px;
+  --dt-bullet-dark: rgb(0 0 0 / 0.64);
+  --dt-bullet-light: rgb(255 255 255 / 0.88);
+  /* Round scroll arrow surface (HorizontalScroll, CardScroll, Gallery) */
+  --dt-scroll-arrow: #ffffff;
+  --dt-scroll-arrow-foreground: #818c99;
+  /* PullToRefresh spinner */
+  --dt-pull-spinner: 32px;
+  --dt-scrollbar-thumb: rgb(0 0 0 / 0.24);
+}
+
+[data-theme="dark"] {
+  --dt-bullet-dark: rgb(0 0 0 / 0.64);
+  --dt-bullet-light: rgb(255 255 255 / 0.88);
+  --dt-scroll-arrow: #2c2d2e;
+  --dt-scroll-arrow-foreground: #e1e3e6;
+  --dt-scrollbar-thumb: rgb(255 255 255 / 0.24);
+}
+
+@theme inline {
+  --spacing-card-scroll-s: var(--dt-card-scroll-s);
+  --spacing-card-scroll-m: var(--dt-card-scroll-m);
+  --spacing-card-scroll-l: var(--dt-card-scroll-l);
+  --spacing-bullet: var(--dt-bullet);
+  --spacing-pull-spinner: var(--dt-pull-spinner);
+  --color-bullet-dark: var(--dt-bullet-dark);
+  --color-bullet-light: var(--dt-bullet-light);
+  --color-scroll-arrow: var(--dt-scroll-arrow);
+  --color-scroll-arrow-foreground: var(--dt-scroll-arrow-foreground);
+}
+
+/* Native scrolling with no visible scrollbar (horizontal strips with arrows). */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Native scrolling with a thin themed scrollbar; replaces a custom scroll-view component. */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dt-scrollbar-thumb) transparent;
+}

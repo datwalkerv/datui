@@ -1,0 +1,11 @@
+node_modules
+dist
+.next
+coverage
+*.tgz
+test-results
+playwright-report
+.turbo
+next-env.d.ts
+apps/docs/generated
+*.tsbuildinfo

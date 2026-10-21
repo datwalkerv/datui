@@ -1,0 +1,40 @@
+/* Tokens for the basics component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+
+:root,
+[data-theme="light"] {
+  --dt-link-visited: #8a5bd6;
+
+  /* Avatar initials gradients (top → bottom), same in both themes. Every stop keeps white initials at >= 4.5:1. */
+  --dt-avatar-red-from: #cc3d55;
+  --dt-avatar-red-to: #b02a5b;
+  --dt-avatar-orange-from: #bc5210;
+  --dt-avatar-orange-to: #a8420c;
+  --dt-avatar-yellow-from: #9a6700;
+  --dt-avatar-yellow-to: #8a5a00;
+  --dt-avatar-green-from: #2a8034;
+  --dt-avatar-green-to: #1f6e2c;
+  --dt-avatar-light-blue-from: #1c75aa;
+  --dt-avatar-light-blue-to: #1b5fa8;
+  --dt-avatar-violet-from: #8a54d6;
+  --dt-avatar-violet-to: #6a3cb8;
+}
+
+[data-theme="dark"] {
+  --dt-link-visited: #b18cf0;
+}
+
+@theme inline {
+  --color-link-visited: var(--dt-link-visited);
+  --color-avatar-red-from: var(--dt-avatar-red-from);
+  --color-avatar-red-to: var(--dt-avatar-red-to);
+  --color-avatar-orange-from: var(--dt-avatar-orange-from);
+  --color-avatar-orange-to: var(--dt-avatar-orange-to);
+  --color-avatar-yellow-from: var(--dt-avatar-yellow-from);
+  --color-avatar-yellow-to: var(--dt-avatar-yellow-to);
+  --color-avatar-green-from: var(--dt-avatar-green-from);
+  --color-avatar-green-to: var(--dt-avatar-green-to);
+  --color-avatar-light-blue-from: var(--dt-avatar-light-blue-from);
+  --color-avatar-light-blue-to: var(--dt-avatar-light-blue-to);
+  --color-avatar-violet-from: var(--dt-avatar-violet-from);
+  --color-avatar-violet-to: var(--dt-avatar-violet-to);
+}

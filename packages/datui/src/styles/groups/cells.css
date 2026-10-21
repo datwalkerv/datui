@@ -1,0 +1,38 @@
+/* Tokens for the cells component group. Define light values under :root and dark overrides under [data-theme="dark"]. */
+
+:root,
+[data-theme="light"] {
+  /* HorizontalCell tile widths */
+  --dt-horizontal-cell-s: 80px;
+  --dt-horizontal-cell-m: 100px;
+  --dt-horizontal-cell-l: 128px;
+  --dt-horizontal-cell-xl: 272px;
+  /* Width of the revealed destructive button in Removable variant="reveal" */
+  --dt-removable-reveal-width: 120px;
+}
+
+@theme inline {
+  --spacing-hcell-s: var(--dt-horizontal-cell-s);
+  --spacing-hcell-m: var(--dt-horizontal-cell-m);
+  --spacing-hcell-l: var(--dt-horizontal-cell-l);
+  --spacing-hcell-xl: var(--dt-horizontal-cell-xl);
+  --spacing-removable-reveal: var(--dt-removable-reveal-width);
+}
+
+/* Accordion height animation, driven by the measured content height Radix exposes. */
+@keyframes dt-collapsible-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+@keyframes dt-collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
