@@ -71,7 +71,7 @@ export const Chip = React.forwardRef<HTMLSpanElement, ChipProps>(function Chip(
           onClick={(e) => onRemove?.(e, value)}
           className="inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-xs text-current opacity-70 outline-none hover:opacity-100 focus-visible:focus-ring"
         >
-          <X aria-hidden className="size-icon-sm" />
+          <X aria-hidden className="dt-icon-turn size-icon-sm" />
         </button>
       )}
     </span>

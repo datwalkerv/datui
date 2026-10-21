@@ -15,9 +15,9 @@ export interface WriteBarIconProps extends React.ButtonHTMLAttributes<HTMLButton
 }
 
 const presets: Record<WriteBarIconMode, { icon: React.ReactNode; label: string }> = {
-  attach: { icon: <Paperclip className="size-icon-lg" aria-hidden />, label: "Attach" },
-  send: { icon: <SendHorizontal className="size-icon-lg" aria-hidden />, label: "Send" },
-  done: { icon: <Check className="size-icon-lg" aria-hidden />, label: "Done" },
+  attach: { icon: <Paperclip className="dt-icon-tilt size-icon-lg" aria-hidden />, label: "Attach" },
+  send: { icon: <SendHorizontal className="dt-icon-nudge size-icon-lg rtl:-scale-x-100" aria-hidden />, label: "Send" },
+  done: { icon: <Check className="dt-icon-draw size-icon-lg" aria-hidden />, label: "Done" },
 };
 
 /** Icon button for WriteBar slots: attach, send (accent), done, or a custom icon via `children`. */

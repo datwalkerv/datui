@@ -67,9 +67,9 @@ export const CheckboxInput = React.forwardRef<HTMLButtonElement, CheckboxInputPr
     >
       <CheckboxPrimitive.Indicator className="flex items-center justify-center">
         {state === "indeterminate" ? (
-          <Minus className="size-icon-sm" strokeWidth={3} aria-hidden />
+          <Minus className="dt-icon-draw size-icon-sm" strokeWidth={3} aria-hidden />
         ) : (
-          <Check className="size-icon-sm" strokeWidth={3} aria-hidden />
+          <Check className="dt-icon-draw size-icon-sm" strokeWidth={3} aria-hidden />
         )}
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>

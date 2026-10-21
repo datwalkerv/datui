@@ -137,7 +137,7 @@ export const Removable = React.forwardRef<HTMLDivElement, RemovableProps>(functi
             )}
             onClick={remove}
           >
-            <X aria-hidden className="size-icon-md" />
+            <X aria-hidden className="dt-icon-turn size-icon-md" />
           </button>
         </span>
       )}

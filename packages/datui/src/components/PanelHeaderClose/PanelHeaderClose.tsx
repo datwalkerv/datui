@@ -14,7 +14,7 @@ export const PanelHeaderClose = React.forwardRef<HTMLElement, PanelHeaderClosePr
 ) {
   return (
     <PanelHeaderButton ref={ref} aria-label={label} {...rest}>
-      <X aria-hidden />
+      <X aria-hidden className="dt-icon-turn" />
     </PanelHeaderButton>
   );
 });

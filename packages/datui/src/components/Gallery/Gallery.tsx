@@ -261,7 +261,11 @@ export const Gallery = React.forwardRef<HTMLDivElement, GalleryProps>(function G
           className="absolute end-2 top-2 z-sticky"
           onClick={() => setPlaying((p) => !p)}
         >
-          {playing ? <Pause aria-hidden className="size-icon-sm" /> : <Play aria-hidden className="size-icon-sm" />}
+          {playing ? (
+            <Pause key="pause" aria-hidden className="dt-icon-pop size-icon-sm" />
+          ) : (
+            <Play key="play" aria-hidden className="dt-icon-pop size-icon-sm" />
+          )}
         </ScrollArrow>
       )}
 

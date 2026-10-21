@@ -97,9 +97,13 @@ export const ActionSheetItem = React.forwardRef<HTMLElement, ActionSheetItemProp
       </span>
       {meta && <span className="shrink-0 text-subhead text-subtle-foreground">{meta}</span>}
       {after && <span className="inline-flex shrink-0">{after}</span>}
-      {selectable && (
-        <Check aria-hidden className={cn("size-icon-md shrink-0 text-primary", !checked && "invisible")} />
-      )}
+      {/* Unchecked keeps the slot's width; the check mounts on selection so it draws in. */}
+      {selectable &&
+        (checked ? (
+          <Check aria-hidden className="dt-icon-draw size-icon-md shrink-0 text-primary" />
+        ) : (
+          <span aria-hidden className="size-icon-md shrink-0" />
+        ))}
     </Tappable>
   );
 });

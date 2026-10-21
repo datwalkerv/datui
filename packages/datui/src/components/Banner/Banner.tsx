@@ -118,10 +118,13 @@ export const Banner = React.forwardRef<HTMLDivElement, BannerProps>(function Ban
           }}
           className={cn("relative z-1 -m-2 shrink-0", image && "text-current")}
         >
-          <X />
+          <X className="dt-icon-turn" />
         </IconButton>
       ) : after === "chevron" ? (
-        <ChevronRight aria-hidden className={cn("size-icon-md shrink-0 self-center", muted)} />
+        <ChevronRight
+          aria-hidden
+          className={cn("dt-icon-nudge size-icon-md shrink-0 self-center rtl:-scale-x-100", muted)}
+        />
       ) : (
         after && <div className="relative z-1 shrink-0">{after}</div>
       )}

@@ -66,7 +66,7 @@ export const CustomSelectOption = React.forwardRef<HTMLDivElement, CustomSelectO
         <span className={cn(textNoWrap && "truncate")}>{children}</span>
         {description && <span className="text-subhead text-muted-foreground">{description}</span>}
       </span>
-      {after ?? (selected && <Check aria-hidden className="size-icon-md shrink-0 text-primary" />)}
+      {after ?? (selected && <Check aria-hidden className="dt-icon-draw size-icon-md shrink-0 text-primary" />)}
     </div>
   );
 });

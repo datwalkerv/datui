@@ -42,7 +42,8 @@ scripts/              repo tooling (inventory check)
 - Interactive surfaces build on `Tappable` (hover/press/focus/disabled feedback) or `Clickable` (semantics only).
 - Overlays portal through `Portal`/`usePortalContainer()` (`src/lib/portal.tsx`) so they inherit theme and density
   from `AppRoot`. Radix primitives receive that container via their `Portal container` prop.
-- Icons come from `lucide-react`, sized with `size-icon-*` utilities, `aria-hidden`.
+- Icons come from `lucide-react`, sized with `size-icon-*` utilities, `aria-hidden`. Motion comes from the
+  `dt-icon-*` classes in `styles/groups/icons.css` (draw, pop, turn, nudge, tilt), never from a JS animation library.
 - Built-in strings (e.g. "Close", "Loading…") are props with English defaults so apps can localize them.
 - Structural responsive behavior (sheet vs dialog, split layout) reads `useAdaptivity()`; pure visual changes use
   Tailwind breakpoints (`tablet:`, `desktop:`).

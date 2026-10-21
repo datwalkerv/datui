@@ -1,0 +1,87 @@
+/*
+ * Icon motion. Plain classes put on lucide icons inside datui components. They use the individual `translate`,
+ * `rotate` and `scale` properties, so they compose with Tailwind's transform utilities (e.g. RTL mirroring), and
+ * they only run when the user has not asked for reduced motion.
+ */
+
+:root {
+  /* Dash length used by the draw-in effect; covers lucide's check/minus/x strokes in a 24px viewBox. */
+  --dt-icon-draw-length: 32;
+}
+
+@layer components {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Strokes draw themselves in when the icon mounts (check marks, done/error states). */
+    .dt-icon-draw :is(path, polyline, line, circle) {
+      stroke-dasharray: var(--dt-icon-draw-length);
+      animation: dt-icon-draw var(--dt-duration-slow) var(--dt-ease-emphasized) both;
+    }
+
+    /* Same draw-in for an always-mounted check that follows a preceding checkbox/radio input. */
+    .dt-icon-draw-peer :is(path, polyline) {
+      stroke-dasharray: var(--dt-icon-draw-length);
+      stroke-dashoffset: var(--dt-icon-draw-length);
+      transition: stroke-dashoffset var(--dt-duration-slow) var(--dt-ease-emphasized);
+    }
+
+    input:checked + * .dt-icon-draw-peer :is(path, polyline) {
+      stroke-dashoffset: 0;
+    }
+
+    /* Pops in when the icon mounts (icon swaps such as play/pause). */
+    .dt-icon-pop {
+      animation: dt-icon-pop var(--dt-duration-normal) var(--dt-ease-emphasized) both;
+    }
+
+    /* Hover/keyboard-focus feedback driven by the nearest interactive ancestor. */
+    .dt-icon-turn,
+    .dt-icon-nudge,
+    .dt-icon-nudge-back,
+    .dt-icon-tilt {
+      transition:
+        rotate var(--dt-duration-normal) var(--dt-ease-emphasized),
+        translate var(--dt-duration-normal) var(--dt-ease-emphasized);
+    }
+
+    :is(button, a, [role="button"]):is(:hover, :focus-visible):not(:disabled, [aria-disabled="true"]) .dt-icon-turn {
+      rotate: 90deg;
+    }
+
+    :is(button, a, [role="button"]):is(:hover, :focus-visible):not(:disabled, [aria-disabled="true"]) .dt-icon-nudge {
+      translate: 2px 0;
+    }
+
+    :is(button, a, [role="button"]):is(:hover, :focus-visible):not(:disabled, [aria-disabled="true"])
+      .dt-icon-nudge-back {
+      translate: -2px 0;
+    }
+
+    :is(button, a, [role="button"]):is(:hover, :focus-visible):not(:disabled, [aria-disabled="true"]) .dt-icon-tilt {
+      rotate: -12deg;
+    }
+
+    [dir="rtl"] :is(button, a, [role="button"]):is(:hover, :focus-visible) .dt-icon-nudge {
+      translate: -2px 0;
+    }
+
+    [dir="rtl"] :is(button, a, [role="button"]):is(:hover, :focus-visible) .dt-icon-nudge-back {
+      translate: 2px 0;
+    }
+  }
+}
+
+@keyframes dt-icon-draw {
+  from {
+    stroke-dashoffset: var(--dt-icon-draw-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dt-icon-pop {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+}

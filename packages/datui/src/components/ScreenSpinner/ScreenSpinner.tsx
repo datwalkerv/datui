@@ -55,15 +55,15 @@ function ScreenSpinnerSwapIcon({
         onClick={onCancel}
         className="absolute inset-0 m-auto inline-flex size-icon-xl items-center justify-center rounded-full focus-visible:focus-ring"
       >
-        <X aria-hidden className="size-icon-md" />
+        <X aria-hidden className="dt-icon-turn size-icon-md" />
       </button>
     );
   }
   const icon =
     state === "done" ? (
-      <Check className="size-icon-xl text-positive" />
+      <Check className="dt-icon-draw size-icon-xl text-positive" />
     ) : state === "error" ? (
-      <CircleX className="size-icon-xl text-destructive" />
+      <CircleX className="dt-icon-draw size-icon-xl text-destructive [--dt-icon-draw-length:64]" />
     ) : (
       customIcon
     );

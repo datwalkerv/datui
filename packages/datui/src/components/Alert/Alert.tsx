@@ -174,7 +174,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert
                 onClick={() => close("click-close-button")}
                 className="absolute end-3 top-3 inline-flex size-control-s items-center justify-center rounded-full text-icon-secondary hover:bg-secondary focus-visible:focus-ring"
               >
-                <X aria-hidden className="size-icon-md" />
+                <X aria-hidden className="dt-icon-turn size-icon-md" />
               </button>
             )}
           </AlertDialog.Content>

@@ -57,7 +57,7 @@ export function TooltipBody({
           onClick={onClose}
           className="-me-1 inline-flex shrink-0 rounded-full opacity-80 hover:opacity-100 focus-visible:focus-ring"
         >
-          <X aria-hidden className="size-icon-sm" />
+          <X aria-hidden className="dt-icon-turn size-icon-sm" />
         </button>
       )}
     </div>

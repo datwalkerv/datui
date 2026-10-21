@@ -14,7 +14,7 @@ export function Chevron({ size = "m", className }: ChevronProps) {
       aria-hidden
       data-chevron=""
       className={cn(
-        "shrink-0 text-icon-tertiary rtl:-scale-x-100",
+        "dt-icon-nudge shrink-0 text-icon-tertiary rtl:-scale-x-100",
         size === "s" ? "size-icon-sm" : "size-icon-lg",
         className,
       )}

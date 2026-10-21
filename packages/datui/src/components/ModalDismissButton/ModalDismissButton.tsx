@@ -15,7 +15,7 @@ export const ModalDismissButton = React.forwardRef<HTMLElement, ModalDismissButt
 ) {
   return (
     <ModalOutsideButton ref={ref} aria-label={children} {...rest}>
-      <X />
+      <X className="dt-icon-turn" />
     </ModalOutsideButton>
   );
 });

@@ -145,3 +145,33 @@ test.describe("docs shell", () => {
     await expect(page.locator(".datui-root").first()).toHaveAttribute("data-theme", "dark");
   });
 });
+
+test.describe("icon motion", () => {
+  test("check marks draw in and close icons turn on hover", async ({ page, isMobile }) => {
+    test.skip(isMobile, "hover feedback is pointer-only");
+    await page.goto("/docs/checkbox");
+    const box = page.locator("[data-example-preview]").getByRole("checkbox").first();
+    if ((await box.getAttribute("aria-checked")) === "true") await box.click();
+    await box.click();
+    const check = box.locator("svg path").first();
+    await expect.poll(() => check.evaluate((el) => getComputedStyle(el).animationName)).toBe("dt-icon-draw");
+
+    await page.goto("/docs/chip");
+    const remove = page
+      .locator("[data-example-preview]")
+      .getByRole("button", { name: /remove/i })
+      .first();
+    const icon = remove.locator("svg");
+    await remove.hover();
+    await expect.poll(() => icon.evaluate((el) => getComputedStyle(el).rotate)).toBe("90deg");
+  });
+
+  test("icon motion is off under reduced motion", async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/docs/checkbox");
+    const box = page.locator("[data-example-preview]").getByRole("checkbox").first();
+    if ((await box.getAttribute("aria-checked")) !== "true") await box.click();
+    const check = box.locator("svg path").first();
+    expect(await check.evaluate((el) => getComputedStyle(el).animationName)).toBe("none");
+  });
+});

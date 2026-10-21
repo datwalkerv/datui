@@ -31,7 +31,7 @@ export const CellCheckbox = React.forwardRef<HTMLInputElement, CellCheckboxProps
         {radio ? (
           <span className="size-2 rounded-full bg-primary-foreground opacity-0" />
         ) : (
-          <Check strokeWidth={3} className="size-icon-sm opacity-0" />
+          <Check strokeWidth={3} className="dt-icon-draw-peer size-icon-sm opacity-0" />
         )}
       </span>
     </span>

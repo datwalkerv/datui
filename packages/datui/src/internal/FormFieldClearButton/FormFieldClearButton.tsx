@@ -30,7 +30,7 @@ export const FormFieldClearButton = React.forwardRef<HTMLButtonElement, FormFiel
         )}
         {...rest}
       >
-        <X className="size-icon-sm" aria-hidden />
+        <X className="dt-icon-turn size-icon-sm" aria-hidden />
       </button>
     );
   },

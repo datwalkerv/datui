@@ -26,7 +26,7 @@ export const PanelHeaderBack = React.forwardRef<HTMLElement, PanelHeaderBackProp
       primary
       {...rest}
     >
-      <ChevronLeft aria-hidden className="rtl:-scale-x-100" />
+      <ChevronLeft aria-hidden className="dt-icon-nudge-back rtl:-scale-x-100" />
     </PanelHeaderButton>
   );
 });

@@ -92,7 +92,7 @@ export const HorizontalCellShowMore = React.forwardRef<HTMLElement, HorizontalCe
       >
         <span className="flex w-full items-center justify-center" style={{ height }}>
           <span className="flex size-12 items-center justify-center rounded-full bg-secondary">
-            <ChevronRight className="size-icon-lg rtl:rotate-180" aria-hidden />
+            <ChevronRight className="dt-icon-nudge size-icon-lg rtl:-scale-x-100" aria-hidden />
           </span>
         </span>
         <span className="max-w-full truncate text-subhead font-medium">{children}</span>

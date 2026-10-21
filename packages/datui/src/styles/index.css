@@ -12,6 +12,7 @@
 @import "./groups/overlays.css";
 @import "./groups/navigation.css";
 @import "./groups/media.css";
+@import "./groups/icons.css";
 
 /* Let the host app's Tailwind generate the utilities datui components use. */
 @source "../";

@@ -24,7 +24,7 @@ export const PanelHeaderEdit = React.forwardRef<HTMLElement, PanelHeaderEditProp
       primary={isActive}
       {...rest}
     >
-      {isActive ? <Check aria-hidden /> : <Pencil aria-hidden />}
+      {isActive ? <Check aria-hidden className="dt-icon-draw" /> : <Pencil aria-hidden className="dt-icon-pop" />}
     </PanelHeaderButton>
   );
 });

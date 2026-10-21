@@ -14,7 +14,7 @@ export const PanelHeaderSubmit = React.forwardRef<HTMLElement, PanelHeaderSubmit
 ) {
   return (
     <PanelHeaderButton ref={ref} aria-label={label} primary {...rest}>
-      <Check aria-hidden />
+      <Check aria-hidden className="dt-icon-nudge" />
     </PanelHeaderButton>
   );
 });
