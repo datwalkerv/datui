@@ -1,7 +1,10 @@
 /*
- * datui design tokens.
- * Raw values live in `--dt-*` custom properties so themes can override them
- * without touching Tailwind. `theme.css` maps them onto Tailwind utilities.
+ * datui design tokens — Ink & Fur
+ * Monochrome, high-contrast design inspired by black-and-white
+ * animal photography, chalk textures, and silver-gray highlights.
+ *
+ * Raw values live in --dt-* custom properties so themes can override
+ * them without touching Tailwind. theme.css maps them onto utilities.
  */
 
 :root,
@@ -9,71 +12,71 @@
   color-scheme: light;
 
   /* Surfaces */
-  --dt-background: #ffffff;
-  --dt-foreground: #000000;
-  --dt-background-secondary: #f0f2f5;
-  --dt-background-tertiary: #f9f9f9;
+  --dt-background: #f7f7f5;
+  --dt-foreground: #111111;
+  --dt-background-secondary: #eeeeec;
+  --dt-background-tertiary: #e5e5e2;
   --dt-card: #ffffff;
-  --dt-card-foreground: #000000;
+  --dt-card-foreground: #111111;
   --dt-popover: #ffffff;
-  --dt-popover-foreground: #000000;
-  --dt-overlay: rgb(0 0 0 / 0.4);
-  --dt-overlay-light: rgb(0 0 0 / 0.04);
+  --dt-popover-foreground: #111111;
+  --dt-overlay: rgb(0 0 0 / 0.55);
+  --dt-overlay-light: rgb(0 0 0 / 0.035);
 
   /* Brand & intent */
-  --dt-primary: #0063d6;
-  --dt-primary-hover: #005ac4;
+  --dt-primary: #111111;
+  --dt-primary-hover: #303030;
   --dt-primary-foreground: #ffffff;
-  --dt-secondary: rgb(0 28 61 / 0.05);
-  --dt-secondary-hover: rgb(0 28 61 / 0.09);
-  --dt-secondary-foreground: #0063d6;
-  --dt-muted: #f2f3f5;
-  --dt-muted-foreground: #626d7a;
-  --dt-subtle-foreground: #5d6773;
-  --dt-accent: rgb(0 99 214 / 0.1);
-  --dt-accent-foreground: #0063d6;
-  --dt-destructive: #b52626;
-  --dt-destructive-hover: #a32222;
+  --dt-secondary: rgb(0 0 0 / 0.055);
+  --dt-secondary-hover: rgb(0 0 0 / 0.095);
+  --dt-secondary-foreground: #171717;
+  --dt-muted: #ededeb;
+  --dt-muted-foreground: #686865;
+  --dt-subtle-foreground: #858580;
+  --dt-accent: rgb(0 0 0 / 0.07);
+  --dt-accent-foreground: #111111;
+  --dt-destructive: #373737;
+  --dt-destructive-hover: #1c1c1c;
   --dt-destructive-foreground: #ffffff;
-  --dt-positive: #22702a;
+  --dt-positive: #414141;
   --dt-positive-foreground: #ffffff;
-  --dt-warning: #ffa000;
-  --dt-warning-foreground: #000000;
-  --dt-link: #0063d6;
-  --dt-mark: rgb(255 214 0 / 0.4);
+  --dt-warning: #d4d4d0;
+  --dt-warning-foreground: #171717;
+  --dt-link: #292929;
+  --dt-mark: rgb(0 0 0 / 0.12);
 
   /* Lines */
-  --dt-border: rgb(0 0 0 / 0.12);
-  --dt-separator: #d7d8d9;
-  --dt-input: #f2f3f5;
-  --dt-input-border: rgb(0 0 0 / 0.12);
-  --dt-ring: rgb(0 99 214 / 0.55);
+  --dt-border: rgb(0 0 0 / 0.13);
+  --dt-separator: #d5d5d1;
+  --dt-input: #f0f0ee;
+  --dt-input-border: rgb(0 0 0 / 0.17);
+  --dt-ring: rgb(0 0 0 / 0.65);
 
   /* Controls */
-  --dt-control-track: #e1e3e6;
+  --dt-control-track: #d2d2ce;
   --dt-control-thumb: #ffffff;
-  --dt-skeleton-from: #f2f3f5;
-  --dt-skeleton-to: #e1e3e6;
-  --dt-icon-secondary: #7f8a96;
-  --dt-icon-tertiary: #b8c1cc;
+  --dt-skeleton-from: #e5e5e1;
+  --dt-skeleton-to: #d5d5d1;
+  --dt-icon-secondary: #777773;
+  --dt-icon-tertiary: #a7a7a2;
 
   /* Shadows */
-  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06), 0 0 2px rgb(0 0 0 / 0.04);
-  --dt-shadow-md: 0 4px 16px rgb(0 0 0 / 0.08), 0 0 4px rgb(0 0 0 / 0.04);
-  --dt-shadow-lg: 0 8px 24px rgb(0 0 0 / 0.12), 0 0 8px rgb(0 0 0 / 0.06);
+  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.045), 0 0 1px rgb(0 0 0 / 0.07);
+  --dt-shadow-md: 0 4px 12px rgb(0 0 0 / 0.065), 0 1px 3px rgb(0 0 0 / 0.04);
+  --dt-shadow-lg: 0 12px 32px rgb(0 0 0 / 0.1), 0 2px 8px rgb(0 0 0 / 0.045);
 
   /* Opacity */
-  --dt-opacity-disabled: 0.48;
-  --dt-opacity-hover: 0.04;
-  --dt-opacity-active: 0.08;
+  --dt-opacity-disabled: 0.42;
+  --dt-opacity-hover: 0.045;
+  --dt-opacity-active: 0.09;
 
   /* Shape */
-  --dt-radius-xs: 4px;
-  --dt-radius-sm: 6px;
-  --dt-radius-md: 8px;
-  --dt-radius-lg: 12px;
-  --dt-radius-xl: 16px;
-  --dt-radius-2xl: 24px;
+  --dt-radius-xs: 3px;
+  --dt-radius-sm: 5px;
+  --dt-radius-md: 7px;
+  --dt-radius-lg: 10px;
+  --dt-radius-xl: 14px;
+  --dt-radius-2xl: 20px;
 
   /* Component heights (density-aware, see below) */
   --dt-height-s: 28px;
@@ -92,9 +95,9 @@
 
   /* Motion */
   --dt-duration-fast: 120ms;
-  --dt-duration-normal: 200ms;
-  --dt-duration-slow: 320ms;
-  --dt-ease-standard: cubic-bezier(0.3, 0.3, 0.5, 1);
+  --dt-duration-normal: 180ms;
+  --dt-duration-slow: 280ms;
+  --dt-ease-standard: cubic-bezier(0.2, 0, 0, 1);
   --dt-ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   /* Layering */
@@ -112,60 +115,65 @@
 
   /* Typography */
   --dt-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --dt-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --dt-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --dt-background: #19191a;
-  --dt-foreground: #e1e3e6;
-  --dt-background-secondary: #0a0a0a;
-  --dt-background-tertiary: #222223;
-  --dt-card: #232324;
-  --dt-card-foreground: #e1e3e6;
-  --dt-popover: #2c2d2e;
-  --dt-popover-foreground: #e1e3e6;
-  --dt-overlay: rgb(0 0 0 / 0.6);
-  --dt-overlay-light: rgb(255 255 255 / 0.04);
+  /* Surfaces */
+  --dt-background: #080808;
+  --dt-foreground: #ededeb;
+  --dt-background-secondary: #111111;
+  --dt-background-tertiary: #191919;
+  --dt-card: #101010;
+  --dt-card-foreground: #ededeb;
+  --dt-popover: #1c1c1c;
+  --dt-popover-foreground: #ededeb;
+  --dt-overlay: rgb(0 0 0 / 0.78);
+  --dt-overlay-light: rgb(255 255 255 / 0.045);
 
-  --dt-primary: #6aa6f0;
-  --dt-primary-hover: #7db2f3;
-  --dt-primary-foreground: #0b1d36;
-  --dt-secondary: rgb(255 255 255 / 0.1);
-  --dt-secondary-hover: rgb(255 255 255 / 0.14);
-  --dt-secondary-foreground: #e1e3e6;
-  --dt-muted: #2c2d2e;
-  --dt-muted-foreground: #9a9c9e;
-  --dt-subtle-foreground: #a6a8aa;
-  --dt-accent: rgb(113 170 235 / 0.16);
-  --dt-accent-foreground: #6aa6f0;
-  --dt-destructive: #ff7a7a;
-  --dt-destructive-hover: #ff8c8c;
-  --dt-destructive-foreground: #330a0a;
-  --dt-positive: #5cc163;
-  --dt-positive-foreground: #0b2a0e;
-  --dt-warning: #ffc107;
-  --dt-warning-foreground: #000000;
-  --dt-link: #6aa6f0;
-  --dt-mark: rgb(255 214 0 / 0.3);
+  /* Brand & intent */
+  --dt-primary: #f1f1ef;
+  --dt-primary-hover: #d5d5d2;
+  --dt-primary-foreground: #080808;
+  --dt-secondary: rgb(255 255 255 / 0.075);
+  --dt-secondary-hover: rgb(255 255 255 / 0.12);
+  --dt-secondary-foreground: #e8e8e6;
+  --dt-muted: #202020;
+  --dt-muted-foreground: #a1a19d;
+  --dt-subtle-foreground: #858580;
+  --dt-accent: rgb(255 255 255 / 0.09);
+  --dt-accent-foreground: #f1f1ef;
+  --dt-destructive: #e1e1de;
+  --dt-destructive-hover: #ffffff;
+  --dt-destructive-foreground: #111111;
+  --dt-positive: #bcbcb7;
+  --dt-positive-foreground: #101010;
+  --dt-warning: #a4a49e;
+  --dt-warning-foreground: #080808;
+  --dt-link: #ededeb;
+  --dt-mark: rgb(255 255 255 / 0.15);
 
+  /* Lines */
   --dt-border: rgb(255 255 255 / 0.12);
-  --dt-separator: #363738;
-  --dt-input: #2c2d2e;
-  --dt-input-border: rgb(255 255 255 / 0.12);
-  --dt-ring: rgb(113 170 235 / 0.56);
+  --dt-separator: #292929;
+  --dt-input: #151515;
+  --dt-input-border: rgb(255 255 255 / 0.16);
+  --dt-ring: rgb(255 255 255 / 0.72);
 
-  --dt-control-track: #4f4f50;
-  --dt-control-thumb: #ffffff;
-  --dt-skeleton-from: #2c2d2e;
-  --dt-skeleton-to: #363738;
-  --dt-icon-secondary: #8f9193;
-  --dt-icon-tertiary: #555657;
+  /* Controls */
+  --dt-control-track: #404040;
+  --dt-control-thumb: #f1f1ef;
+  --dt-skeleton-from: #191919;
+  --dt-skeleton-to: #292929;
+  --dt-icon-secondary: #a0a09b;
+  --dt-icon-tertiary: #656560;
 
-  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.32), 0 0 2px rgb(0 0 0 / 0.16);
-  --dt-shadow-md: 0 4px 16px rgb(0 0 0 / 0.4), 0 0 4px rgb(0 0 0 / 0.2);
-  --dt-shadow-lg: 0 8px 24px rgb(0 0 0 / 0.48), 0 0 8px rgb(0 0 0 / 0.24);
+  /* Shadows */
+  --dt-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35), 0 0 1px rgb(255 255 255 / 0.035);
+  --dt-shadow-md: 0 6px 18px rgb(0 0 0 / 0.36), 0 1px 3px rgb(0 0 0 / 0.22);
+  --dt-shadow-lg: 0 14px 40px rgb(0 0 0 / 0.5), 0 2px 10px rgb(0 0 0 / 0.24);
 }
 
 /* Compact density: desktop pointer + dense layouts. */
